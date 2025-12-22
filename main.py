@@ -16,16 +16,21 @@ def main():
 
     while True:
         log_state()
+
+        # Events
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
         
+        # Logic
+        player.update(deltaTime)
+
+        # Draw
         screen.fill("black")
-        
         player.draw(screen)
         
         pygame.display.flip()
-        deltaTime = clock.tick(60)
+        deltaTime = clock.tick(60) / 1000
 
 
 if __name__ == "__main__":
