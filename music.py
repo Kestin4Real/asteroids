@@ -4,7 +4,7 @@ from constants import MUSIC_LOOP_SECONDS, MUSIC_REWIND_SECONDS
 class Music(pygame.sprite.Sprite):
 
     def __init__(self):
-        pygame.sprite.Sprite.__init__(self, self.containers)
+        pygame.sprite.Sprite.__init__(self)
         pygame.mixer.music.load("Battle Squadron In Game - Maf Remix.mp3")
         pygame.mixer.music.play(loops=-1)
     
